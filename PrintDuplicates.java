@@ -1,0 +1,30 @@
+package week1.day2;
+
+import java.util.Arrays;
+
+public class PrintDuplicates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] num= {2,5,7,7,5,9,2,3};
+		for (int i=0; i<num.length; i++)
+		{
+			for(int j=i+1; j<num.length; j++)
+			{
+			if(num[i]==num[j])
+			{
+				System.out.println("The duplicate values are :"+num[j]);
+			}
+			}
+		}
+			Arrays.sort(num);
+			for (int i=0;i<num.length-1;i++)
+			{
+				if(num[i]==num[i+1])
+				{
+					System.out.println("Duplicate values :"+num[i+1]);
+				}
+			}
+	}
+
+}
